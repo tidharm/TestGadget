@@ -17,7 +17,7 @@
  
   <Extension id="TestGadget" type="gadget">
     <Name>Test Gadget Gmail contextual gadget</Name>
-    <Url>http://www.google.net/context-gadget.xml</Url>
+    <Url>https://github.com/tidharm/TestGadget/blob/master/TestGadget.xml</Url>
     <Container name="mail"/>
   </Extension>
  
