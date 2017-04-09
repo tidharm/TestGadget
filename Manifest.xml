@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ApplicationManifest xmlns="http://schemas.google.com/ApplicationManifest/2009">
+ 
+  <Name>Test Gadget</Name>
+ 
+  <Description>
+    Test Gadget Description
+  </Description>
+ 
+  <Extension id="TestGadgetExtractor" type="contextExtractor">
+    <Name>Test Gadget Stuff</Name>
+    <Url>google.com:EmailBodyExtractor</Url>
+    <Triggers ref="TestGadget"/>
+    <Scope ref="emailBody"/>
+    <Container name="mail"/>
+  </Extension>
+ 
+  <Extension id="TestGadget" type="gadget">
+    <Name>Test Gadget Gmail contextual gadget</Name>
+    <Url>http://www.google.net/context-gadget.xml</Url>
+    <Container name="mail"/>
+  </Extension>
+ 
+  <Scope id="emailBody">
+    <Url>tag:google.com,2010:auth/contextual/extractor/BODY</Url>
+    <Reason>
+      This application searches the message body of each email for text related to Test Gadget.
+    </Reason>
+  </Scope>
+ 
+</ApplicationManifest>
